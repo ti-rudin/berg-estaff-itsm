@@ -235,5 +235,125 @@
                 "4df9568744ee9d87"
             ]
         ]
+    },
+    {
+        "id": "586360d4f3345999",
+        "type": "http request",
+        "z": "2c04b82b54e7c438",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 590,
+        "y": 840,
+        "wires": [
+            [
+                "f32588d43c09d518",
+                "52eb0afcf151a3a8"
+            ]
+        ]
+    },
+    {
+        "id": "1d1cefe809fca92e",
+        "type": "http response",
+        "z": "2c04b82b54e7c438",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 920,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "f32588d43c09d518",
+        "type": "function",
+        "z": "2c04b82b54e7c438",
+        "name": "function 4",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 840,
+        "wires": [
+            [
+                "1d1cefe809fca92e"
+            ]
+        ]
+    },
+    {
+        "id": "5d44aabb8d36a79b",
+        "type": "inject",
+        "z": "2c04b82b54e7c438",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 840,
+        "wires": [
+            [
+                "cda015b82b2ab885"
+            ]
+        ]
+    },
+    {
+        "id": "52eb0afcf151a3a8",
+        "type": "debug",
+        "z": "2c04b82b54e7c438",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "cda015b82b2ab885",
+        "type": "function",
+        "z": "2c04b82b54e7c438",
+        "name": "function 5",
+        "func": "let createurl = 'https://berg.itsm365.com/sd/services/rest/';\nlet key = '?accessKey=c7d3be27-3678-4b00-ace6-94513e62ca44';\nmsg.url = createurl + 'create/serviceCall' + key;\n\nmsg.payload = {\n    \"agreement\": \"agreement$605301\",\n    \"service\": \"slmService$133968701\",\n    \"baseCategory\": \"category$108594953\",\n    \"client\": \"employee$140161423\",\n    \"shortDescr\": \"shortDescr\",\n    \"descriptionRTF\": \"descriptionRTF\",\n    \"jobTitleEmp\": \"Должность\",\n    \"surNameEmp\": \"Фамилия\",\n    \"NameEmp\": \"Имя\"\n}\n\nreturn msg;\n\n//msg.url = \"http://localhost:1880/test\"\n\n//\"baseCategory\": \"category$108594953\",",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 840,
+        "wires": [
+            [
+                "586360d4f3345999"
+            ]
+        ]
     }
 ]
