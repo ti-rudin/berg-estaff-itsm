@@ -7,6 +7,13 @@
         "info": ""
     },
     {
+        "id": "0aa02b07887f2bcd",
+        "type": "appwrite-config",
+        "endpoint": "http://192.168.11.15/v1",
+        "project": "63559599b6e40a21e5e2",
+        "apikey": "827e8a972f5286c237589ed0d603859f331258f0b1cf50f6c734908a09357db833a711041083c5252326b83ed62ff2eb7ff715928f58e9b415d702f105b7af7a39908b03727e717e7dbdb5fc78d622787cfcb5f4faa6784d39e6b4fddc6c221999a8fc1a075ef3fb614b079d5614099210f5eb18e4a321751b7eed5ff3815668"
+    },
+    {
         "id": "1c8919554f74222b",
         "type": "inject",
         "z": "2c04b82b54e7c438",
@@ -254,5 +261,65 @@
         "x": 210,
         "y": 540,
         "wires": []
+    },
+    {
+        "id": "fcf1188971baf330",
+        "type": "list documents",
+        "z": "2c04b82b54e7c438",
+        "appwriteConfig": "0aa02b07887f2bcd",
+        "collectionId": "63559ddfb2bcd75e66cd",
+        "name": "qqq",
+        "x": 170,
+        "y": 920,
+        "wires": [
+            [
+                "1117bc47debe8b81"
+            ]
+        ]
+    },
+    {
+        "id": "1117bc47debe8b81",
+        "type": "debug",
+        "z": "2c04b82b54e7c438",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "59acc73948d03d80",
+        "type": "inject",
+        "z": "2c04b82b54e7c438",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "63559dd38604c03b42f2",
+        "payloadType": "str",
+        "x": 170,
+        "y": 840,
+        "wires": [
+            [
+                "fcf1188971baf330"
+            ]
+        ]
     }
 ]
