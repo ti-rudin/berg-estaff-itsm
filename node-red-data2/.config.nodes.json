@@ -434,25 +434,5 @@
                 "file": "/data/node_modules/node-red-contrib-advanced-logger/advanced-logger.js"
             }
         }
-    },
-    "node-red-contrib-appwrite": {
-        "name": "node-red-contrib-appwrite",
-        "version": "0.0.10",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "appwrite": {
-                "name": "appwrite",
-                "types": [
-                    "list documents",
-                    "appwrite-config"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-appwrite",
-                "file": "/data/node_modules/node-red-contrib-appwrite/appwrite.js"
-            }
-        }
     }
 }
