@@ -65,7 +65,8 @@
         "wires": [
             [
                 "65b8a7f220fd6a7c",
-                "569106536f0e89c7"
+                "569106536f0e89c7",
+                "1ed1ec9f12e95f97"
             ]
         ]
     },
@@ -235,5 +236,23 @@
                 "4df9568744ee9d87"
             ]
         ]
+    },
+    {
+        "id": "1ed1ec9f12e95f97",
+        "type": "advanced logger",
+        "z": "2c04b82b54e7c438",
+        "name": "q",
+        "filename": "node-red.log",
+        "complete": "payload",
+        "console": true,
+        "file": false,
+        "debug": true,
+        "zip": false,
+        "logtype": "info",
+        "prefix": "/AdvancedLogger/%DATE%.log",
+        "datePattern": "YYYY-MM-DD.",
+        "x": 210,
+        "y": 540,
+        "wires": []
     }
 ]
